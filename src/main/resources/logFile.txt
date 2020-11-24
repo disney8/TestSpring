@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-11-19T00:49:23</date>
+  <millis>1605764963221</millis>
+  <sequence>3</sequence>
+  <logger>MyLog</logger>
+  <level>INFO</level>
+  <class>com.proyecto.util.Demo</class>
+  <method>LogMessage</method>
+  <thread>1</thread>
+  <message>messageText</message>
+</record>
