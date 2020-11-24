@@ -16,6 +16,7 @@ CREATE DATABASE tarea
        LC_CTYPE = 'Spanish_Spain.1252'
        CONNECTION LIMIT = -1;
 ```
+Se accede a la Url /login pasandole por paramtros nombre y contraseña , la cual va a verificar contra el fichero de usuarios , Obtenemos el token , que ponemos en el Authorization y se podra acceder a los demas endpoint definidos.
 
 ### Los endpoint definidos son: 
   *  /clientDetails
@@ -34,4 +35,6 @@ CREATE DATABASE tarea
 
 ### El fichero de logs: 
 * app.log
+
+### El fichero de usuarios usuarios.txt
 
