@@ -22,8 +22,10 @@ CREATE DATABASE tarea
   *  /clientes
   *  /clienteCreate
   *  /productos
-  * /productCreate
-  * /productDelete
+  *  /productCreate
+  *  /productDelete
+  *  /login
+  *  /addventa
   
 ### Se definieron 2 test: 
 
