@@ -20,6 +20,10 @@ CREATE DATABASE tarea
 ### Los endpoint definidos son: 
   *  /clientDetails
   *  /clientes
+  *  /clienteCreate
+  *  /productos
+  * /productCreate
+  * /productDelete
   
 ### Se definieron 2 test: 
 
