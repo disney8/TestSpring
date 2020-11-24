@@ -7,6 +7,8 @@ import java.util.List;
 import java.io.IOException;
 import java.util.Date;
 import java.util.Optional;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +31,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 @RestController
 @RequestMapping("/api")
 public class ClienteController {
+	  private static Logger logger; 
 	
 	  @Autowired
 	   private ClienteService clienteService;
@@ -62,10 +65,10 @@ public class ClienteController {
 	    public void updateClient(@RequestBody Cliente client, @RequestParam("id") Integer clientId) {
 	    	clienteService.updateClientRecord(client, clientId);
 	    }
-	    
-	    
+	    	    
 	    @RequestMapping(value="/login", method = RequestMethod.POST)	    
 	    public User login(@RequestBody User userLogin) {
+	    logger = Logger.getLogger("app.log"); 
 		//public User login(@RequestParam("nombreUsuario") String nombreUsuario, @RequestParam("password") String password) {
 			utiles util = new utiles();
 			try {
@@ -73,7 +76,13 @@ public class ClienteController {
 					if (user.getNombreUsuario().equals(userLogin.getNombreUsuario()) && user.getPassword().equals(userLogin.getPassword())) {
 						String token = getJWTToken(userLogin.getNombreUsuario());
 						user.setToken(token);
-						return user;
+						logger.getHandlers();					
+					    logger.log(Level.INFO, "usuario OK");  
+						return user;  
+					
+					}else {
+						logger.getHandlers();					
+					    logger.log(Level.SEVERE, "usuario no autorizado");  
 					}
 				}
 			} catch (IOException e) {

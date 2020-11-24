@@ -1,14 +1,11 @@
 package com.proyecto.controller;
 
-import java.net.URI;
 import java.net.URISyntaxException;
 import java.sql.Timestamp;
-import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.proyecto.model.Cliente;
 import com.proyecto.model.DetalleVenta;
 import com.proyecto.model.Venta;
-import com.proyecto.repository.ClienteRepository;
 import com.proyecto.service.ClienteService;
 import com.proyecto.service.DetalleVentaService;
 import com.proyecto.service.ProductoService;

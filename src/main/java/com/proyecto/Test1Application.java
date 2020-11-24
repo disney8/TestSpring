@@ -8,7 +8,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.http.HttpMethod;
@@ -25,8 +24,7 @@ import com.proyecto.util.utiles;
 @EnableAutoConfiguration
 @EnableJpaAuditing
 @EnableScheduling
-public class Test1Application  extends SpringBootServletInitializer {
- 
+public class Test1Application  extends SpringBootServletInitializer { 
 	 private static final Logger logger = LogManager.getLogger(Test1Application.class);
 	 
 	public static void main(String[] args) {
@@ -40,7 +38,7 @@ public class Test1Application  extends SpringBootServletInitializer {
 		}
 		
 //		  java 8 lambda, no need to check log level
-//		 logger.debug("Hello from Log4j 2 - num : {}", () -> num)
+//		 logger.debug("from Log4j 2 - producto : {}", () -> producto)
 	}	
 	
 	@EnableWebSecurity

@@ -66,7 +66,7 @@ public class ProductoApplicationTests{
 	     
 	   @Test
 	   public void getProductsList() throws Exception {
-			  String uri = "/productos";	
+			  String uri = "/api/productos";	
 			  mvc   = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
 			  MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.get(uri)
 			      .accept(MediaType.APPLICATION_JSON_VALUE)).andReturn();
@@ -79,7 +79,7 @@ public class ProductoApplicationTests{
 	   
 	   @Test
 	   public void createProduct() throws Exception {
-		  String uri = "/productCreate";
+		  String uri = "/api/productCreate";
 	      Producto product = new Producto();
 	      product.setNombre("ProductoDisney");
 	      product.setPrecio(new Float(10));	      
@@ -96,7 +96,7 @@ public class ProductoApplicationTests{
 	   
 	   @Test
 	   public void productUpdate() throws Exception {
-		  String uri = "/productUpdate";
+		  String uri = "/api/productUpdate";
 	      Producto product = new Producto();
 	      product.setNombre("ProductoDisneyModificado");
 	      product.setPrecio(new Float(1555));	      

@@ -2,7 +2,6 @@ package com.proyecto.model;
 
 import javax.persistence.*;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.proyecto.model.Venta;
 import com.proyecto.model.Producto;
 
